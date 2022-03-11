@@ -1,0 +1,14 @@
+.one-or-more-robots {
+  color: #00B39D;
+}
+
+.addRobotBtn {
+  background-color: #FFFFFF;
+  border: 1px solid #E3E2E3;
+  padding: 1.5em;
+}
+
+.addRobotBtn:hover {
+  border: 1px solid #00B39D;
+  transition: all 0.5s;
+}
