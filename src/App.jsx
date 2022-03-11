@@ -1,10 +1,11 @@
 import React from 'react';
 import fetchRobots from './services/api';
+import Header from './components/Header';
 
 function App() {
   fetchRobots();
   return (
-    <h1>Olá!</h1>
+    <Header />
   );
 }
 

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.vertical-row {
+  border-left: 2px solid #DFDFDF;
+  height: 1em;
+}
+
+.header-text {
+  font-weight: 500;
+  color: #343234;
+  font-size: 1em;
+}
+
+.slash {
+  color:#DFDFDF;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.header-actual-page {
+  color: #00B39D;
+  font-size: 1em;
+  font-weight: 500;
+}
