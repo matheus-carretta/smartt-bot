@@ -18,6 +18,7 @@
         "react"
     ],
     "rules": {
-        "linebreak-style": "off"
+        "linebreak-style": "off",
+        "react/no-array-index-key": "off"
     }
 }

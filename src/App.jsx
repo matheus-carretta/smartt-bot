@@ -1,11 +1,15 @@
 import React from 'react';
-import fetchRobots from './services/api';
+import { fetchRobots } from './services/api';
 import Header from './components/Header';
+import Transaction from './components/Transactions';
 
 function App() {
   fetchRobots();
   return (
-    <Header />
+    <main>
+      <Header />
+      <Transaction />
+    </main>
   );
 }
 

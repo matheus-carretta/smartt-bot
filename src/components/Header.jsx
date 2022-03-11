@@ -9,7 +9,7 @@ function Header() {
       <div className="vertical-row" />
       <p className="header-text">
         Análise Geral
-        <span className="slash">/</span>
+        <span className="slash"> / </span>
         <span className="header-actual-page">Principal</span>
       </p>
     </header>
