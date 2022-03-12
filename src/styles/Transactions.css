@@ -1,4 +1,67 @@
+.transactions-container {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.097543);
+  border-radius: 4px;
+  margin-top: 1em;
+  padding: 1em;
+}
+
 .horizontal-row {
   border-top: 1px solid #E3E2E3;
   width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.summary-transaction-title {
+  color: #343234;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.transictions-title, .total-transactions {
+  color: #888689;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.summary-transaction-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.8em 0em;
+}
+
+.all-moviments-container {
+  text-align: right;
+}
+
+.moviments-value, .moviments-total {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.paper-negotiations-container {
+  margin-top: 0.5em;
+}
+
+.paper-numbers-container {
+  margin-top: 0.5em;
+}
+
+.resume-paper-name {
+  color: #FFFFFF;
+  background: #00B39D;
+  border-radius: 2px;
+  padding: 3px 10px 1px 6px; 
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+.transaction-number {
+  color: #343234;
+  font-size: 0.8em;
+  font-weight: 800;
 }

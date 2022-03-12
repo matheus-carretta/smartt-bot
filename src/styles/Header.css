@@ -1,18 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.097543);
+  border-radius: 8px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
 }
 
 .vertical-row {
   border-left: 2px solid #DFDFDF;
-  height: 1em;
+  height: 1.7em;
+  margin: 0px 1em;
 }
 
 .header-text {
-  font-weight: 500;
+  font-weight: 700;
   color: #343234;
   font-size: 1em;
 }
