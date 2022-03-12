@@ -19,6 +19,8 @@
     ],
     "rules": {
         "linebreak-style": "off",
-        "react/no-array-index-key": "off"
+        "react/no-array-index-key": "off",
+        "import/no-extraneous-dependencies": "off",
+        "camelcase": "off"
     }
 }
