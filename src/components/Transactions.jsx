@@ -39,10 +39,11 @@ function Transaction() {
           {Object.keys(moviment).length === 0 ? '' : moviment.papers.map(({ name, trasactions }, index) => (
             <div key={index} className="paper-numbers-container">
               <span className="resume-paper-name">{name}</span>
+              <hr className="hyphen-span" />
               <span className="transaction-number">
                 {trasactions}
               </span>
-              <span className="total-transactions">{ ` ${trasactions > 1 ? 'transações' : 'transação'}` }</span>
+              <span className="total-transactions">{ `${trasactions > 1 ? ' transações' : ' transação'}` }</span>
             </div>
           ))}
         </div>

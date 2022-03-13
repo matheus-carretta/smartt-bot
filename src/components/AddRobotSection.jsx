@@ -6,8 +6,8 @@ function AddRobotSection() {
   const [robotQuantity, setRobotQuantity] = useState(2);
 
   return (
-    <section>
-      <div>
+    <section className="add-robot-section">
+      <div className="add-button-container">
         <button
           className="addRobotBtn"
           type="button"
@@ -16,9 +16,9 @@ function AddRobotSection() {
         >
           <img src={AddRobot} alt="Add a new robot button" />
         </button>
-        <div>
-          <h2>Adicionar novo Robô</h2>
-          <p>
+        <div className="add-robot-infos-container">
+          <h2 className="add-robot-title">Adicionar novo Robô</h2>
+          <p className="disponible-robots">
             Você possui
             <span className={robotQuantity <= 0 ? 'zero-robots' : 'one-or-more-robots'}>
               {` ${robotQuantity} robôs `}

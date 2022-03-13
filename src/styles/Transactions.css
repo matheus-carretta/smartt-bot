@@ -3,13 +3,13 @@
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.097543);
   border-radius: 4px;
   margin-top: 1em;
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 .horizontal-row {
   border-top: 1px solid #E3E2E3;
   width: 100%;
-  margin-bottom: 0.5em;
+  margin: 1em 0em;
 }
 
 .summary-transaction-title {
@@ -17,6 +17,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 1em;
+  margin-bottom: 1.2em;
 }
 
 .transictions-title, .total-transactions {
@@ -30,7 +31,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.8em 0em;
 }
 
 .all-moviments-container {
@@ -40,15 +40,21 @@
 .moviments-value, .moviments-total {
   font-style: normal;
   font-weight: 800;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .paper-negotiations-container {
-  margin-top: 0.5em;
+  margin-top: 1em;
+  margin-right: 5%;
 }
 
 .paper-numbers-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: 0.5em;
+  flex-grow: 0;
 }
 
 .resume-paper-name {
@@ -64,4 +70,11 @@
   color: #343234;
   font-size: 0.8em;
   font-weight: 800;
+  margin-right: 4px;
+}
+
+.hyphen-span {
+  border-top: 1px dashed #C5C5C5;
+  flex-grow: 1;
+  margin: 0px 0.4em;
 }

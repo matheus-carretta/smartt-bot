@@ -5,11 +5,11 @@ header {
   display:flex;
   flex-direction: row;
   align-items: center;
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 .vertical-row {
-  border-left: 2px solid #DFDFDF;
+  border-left: 1px solid #DFDFDF;
   height: 1.7em;
   margin: 0px 1em;
 }

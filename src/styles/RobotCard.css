@@ -5,3 +5,197 @@
 .negative-balance {
   color: #FF4501;
 }
+
+.robot-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.097543);
+  border-radius: 4px;
+  padding: 0.5em 2em;
+  margin-bottom: 1em;
+  width: 330px;
+  
+}
+
+.robot-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em 0em;
+  margin-right: 0.1em;
+}
+
+.robot-title {
+  color: #343234;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.1em;
+  max-width: 60%;
+}
+
+.minor-title {
+  font-size: 0.9em !important;
+}
+
+.circle-status {
+  width: 10px;
+  margin-right: 0.3em;
+}
+
+.running-container {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+.running-status {
+  color: #888689;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-right: 0.7em;
+}
+
+.robot-id {
+  color: #888689;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-bottom: 0.1em;
+  padding: 0.3em 0em;
+}
+
+.robot-process-infos {
+  display: flex;
+  flex-direction: row;
+}
+
+.robot-info {
+  color: #888689;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.6em;
+  padding: 0.3em 0.6em 0.3em 0.4em;
+  border: 1px solid #E3E2E3;
+  border-radius: 2px;
+  margin: 0.3em 0.2em 0.5em 0em;
+}
+
+.last-paper-infos-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #E3E2E3;
+  border-radius: 2px;
+  margin-top: 0.6em;
+}
+
+.last-paper-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5em 0.6em;
+  flex-grow: 1;
+}
+
+.last-paper-position {
+  color: #5F5D60;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.2em;
+}
+
+.paper-name {
+  color: #959AA2;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 0.1em;
+}
+
+.paper-type {
+  color: #343234;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.profit-value-container{
+  margin-left: 0.5em;
+  margin-right: 1em;
+}
+
+.profit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.paper-value {
+  color: #888689;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.8em;
+  text-align: right;
+}
+
+.profit-value {
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.daily-infos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.7em;
+}
+
+.balance-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.balance-title {
+  color: #888689;
+  font-weight: 400;
+  font-size: 0.8em; 
+  margin-right: 0.2em;
+}
+
+.daily-balance {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.daily-transictions-title {
+  color: #888689;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.daily-transictions {
+  color: #5F5D60;
+  font-weight: 700;
+  font-size: 1.4em;
+  text-align: right;
+}
+
+.no-paper-found{
+  display: flex;
+  padding: 1.1em 0em;
+  margin: 0 auto;
+}
+
+.no-paper-found > p {
+  color: #959AA2;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.1em;
+}

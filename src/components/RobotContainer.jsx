@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchRobots } from '../services/api';
 import RobotCard from './RobotCard';
+import '../styles/RobotContainer.css';
 
 function RobotContainer() {
   const [robots, setRobots] = useState([]);
@@ -15,7 +16,7 @@ function RobotContainer() {
   }, []);
 
   return (
-    <section>
+    <section className="robot-cards-container">
       {robots.length > 0 ? robots.map((robot) => <RobotCard key={robot.id} robot={robot} />) : '' }
     </section>
   );
