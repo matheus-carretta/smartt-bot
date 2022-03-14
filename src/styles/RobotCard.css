@@ -16,7 +16,6 @@
   padding: 0.5em 2em;
   margin-bottom: 1em;
   width: 330px;
-  
 }
 
 .robot-title-container {
@@ -32,7 +31,7 @@
   font-style: normal;
   font-weight: 900;
   font-size: 1.1em;
-  max-width: 60%;
+  max-width: 60%; 
 }
 
 .minor-title {
@@ -55,7 +54,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 0.8em;
-  margin-right: 0.7em;
 }
 
 .robot-id {

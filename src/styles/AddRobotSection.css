@@ -2,22 +2,23 @@
   color: #00B39D;
 }
 
-.addRobotBtn {
+.add-robot-btn {
   background: #FFFFFF;
   border: 1px solid #E3E2E3;
   box-sizing: border-box;
   border-radius: 4px;
   height: 5em;
   width: 5em;
+  margin-right: 1em;
 }
 
-.addRobotBtn:hover {
+.add-robot-btn:hover {
   border: 1px solid #00B39D;
   transform: scale(120%);
   transition: all 0.5s;
 }
 
-.addRobotBtn[disabled]:hover {
+.add-robot-btn[disabled]:hover {
   border: 1px solid #E3E2E3;
   transform: inherit;
 }

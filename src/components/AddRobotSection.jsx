@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import AddRobot from '../images/AddRobot.svg';
 import '../styles/AddRobotSection.css';
+import Modal from './Modal';
 
 function AddRobotSection() {
-  const [robotQuantity, setRobotQuantity] = useState(2);
+  const [robotQuantity] = useState(2);
+  const [isModalVisible, setIsModalVisibile] = useState(false);
 
   return (
     <section className="add-robot-section">
       <div className="add-button-container">
         <button
-          className="addRobotBtn"
+          className="add-robot-btn"
           type="button"
-          onClick={() => setRobotQuantity((prevState) => prevState - 1)}
+          onClick={() => setIsModalVisibile(true)}
           disabled={robotQuantity <= 0}
         >
           <img src={AddRobot} alt="Add a new robot button" />
@@ -27,6 +29,7 @@ function AddRobotSection() {
           </p>
         </div>
       </div>
+      { isModalVisible && <Modal onClose={() => setIsModalVisibile(false)} />}
     </section>
   );
 }

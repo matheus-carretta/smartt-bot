@@ -43,7 +43,7 @@ function Transaction() {
               <span className="transaction-number">
                 {trasactions}
               </span>
-              <span className="total-transactions">{ `${trasactions > 1 ? ' transações' : ' transação'}` }</span>
+              <span className="total-transactions">{ `${trasactions !== 1 ? ' transações' : ' transação'}` }</span>
             </div>
           ))}
         </div>

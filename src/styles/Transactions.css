@@ -35,6 +35,7 @@
 
 .all-moviments-container {
   text-align: right;
+  margin-right: 1%;
 }
 
 .moviments-value, .moviments-total {
@@ -45,7 +46,7 @@
 
 .paper-negotiations-container {
   margin-top: 1em;
-  margin-right: 5%;
+  margin-right: 3%;
 }
 
 .paper-numbers-container {
