@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Modal.css';
+// import { createRobot } from '../services/api';
 
 function Modal({ onClose = () => {} }) {
+  const [name, setName] = useState('');
+  const [initialValue, setInitialValue] = useState(0);
+  const [strategy, setStrategy] = useState(2); // 2 = Tangram, 1 = Price Action
+
   const handleOutsideClick = ({ target }) => {
-    if (target.id === 'modal') onClose();
+    if (target.id === 'modal') {
+      onClose();
+      setName('');
+      setInitialValue(0);
+      setStrategy(2);
+    }
+  };
+
+  const requestBody = {
+    title: name,
+    mode: 0,
+    strategy_id: strategy,
+    initial_capital: parseFloat(initialValue),
+    simulation: 0,
+    broker_id: 1,
   };
 
   return (
@@ -26,6 +45,8 @@ function Modal({ onClose = () => {} }) {
             Nome do produto
             <br />
             <input
+              value={name}
+              onChange={({ target }) => setName(target.value)}
               className="form-input"
               type="text"
               id="robotName"
@@ -37,6 +58,8 @@ function Modal({ onClose = () => {} }) {
             Capital inicial do robô
             <br />
             <input
+              value={initialValue}
+              onChange={({ target }) => setInitialValue(target.value)}
               className="form-input"
               required
               type="number"
@@ -45,11 +68,11 @@ function Modal({ onClose = () => {} }) {
             />
           </label>
           <h2 className="select-btn-title">Selecione uma das estratégias abaixo</h2>
-          <button className="selected" type="button">Tangram</button>
-          <button className="not-selected" type="button">Price Action</button>
+          <button className={strategy === 2 ? 'selected' : 'not-selected'} type="button" onClick={() => setStrategy(2)}>Tangram</button>
+          <button className={strategy === 2 ? 'not-selected' : 'selected'} type="button" onClick={() => setStrategy(1)}>Price Action</button>
           <div className="bottom-form-btns">
             <button className="cancel-btn" type="button" onClick={onClose}>Cancelar</button>
-            <button className="confirm-btn" type="button">Criar robô</button>
+            <button className="confirm-btn" type="button" onClick={() => console.log(requestBody)}>Criar robô</button>
           </div>
         </form>
       </div>
