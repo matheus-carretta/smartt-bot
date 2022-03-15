@@ -4,7 +4,7 @@ export const fetchRobots = async () => {
   return data;
 };
 
-export const fetchRobotsOrveview = async () => {
+export const fetchRobotsOverview = async () => {
   const response = await fetch('https://api-front-test.k8s.smarttbot.com/api/v1/robot/overview');
   const { data } = await response.json();
   return data;

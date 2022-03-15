@@ -10,7 +10,7 @@ import RedCircle from '../images/RedCircle.svg';
 function RobotCard(props) {
   const { robot } = props;
   const {
-    id, title, running, stock_codes, type, daily_balance, movimentations, last_paper, simution,
+    id, title, running, stock_codes, type, daily_balance, movimentations, last_paper, simulation,
   } = robot;
 
   const todayDate = getTodayDateFormat();
@@ -33,7 +33,7 @@ function RobotCard(props) {
         {id}
       </p>
       <div className="robot-process-infos">
-        <p className="robot-info">{simution === 0 ? 'Pessimista' : 'Otimista'}</p>
+        <p className="robot-info">{simulation === 0 ? 'Pessimista' : 'Otimista'}</p>
         <p className="robot-info">{stock_codes}</p>
         <p className="robot-info">{type}</p>
       </div>

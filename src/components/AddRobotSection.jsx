@@ -4,7 +4,7 @@ import '../styles/AddRobotSection.css';
 import Modal from './Modal';
 
 function AddRobotSection() {
-  const [robotQuantity] = useState(2);
+  const [robotQuantity, setRobotQuantity] = useState(2);
   const [isModalVisible, setIsModalVisibile] = useState(false);
 
   return (
@@ -29,7 +29,14 @@ function AddRobotSection() {
           </p>
         </div>
       </div>
-      { isModalVisible && <Modal onClose={() => setIsModalVisibile(false)} />}
+      { isModalVisible && (
+      <Modal
+        onClose={
+        () => setIsModalVisibile(false)
+      }
+        setRobotQuantity={() => setRobotQuantity()}
+      />
+      )}
     </section>
   );
 }

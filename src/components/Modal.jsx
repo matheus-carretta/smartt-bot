@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../styles/Modal.css';
 // import { createRobot } from '../services/api';
 
-function Modal({ onClose = () => {} }) {
+function Modal({ onClose = () => {} }, setRobotQuantity) {
   const [name, setName] = useState('');
   const [initialValue, setInitialValue] = useState(0);
   const [strategy, setStrategy] = useState(2); // 2 = Tangram, 1 = Price Action
@@ -24,6 +24,11 @@ function Modal({ onClose = () => {} }) {
     initial_capital: parseFloat(initialValue),
     simulation: 0,
     broker_id: 1,
+  };
+
+  const sendRobotInfo = (body) => {
+    console.log(body);
+    setRobotQuantity((prevState) => prevState - 1);
   };
 
   return (
@@ -72,7 +77,7 @@ function Modal({ onClose = () => {} }) {
           <button className={strategy === 2 ? 'not-selected' : 'selected'} type="button" onClick={() => setStrategy(1)}>Price Action</button>
           <div className="bottom-form-btns">
             <button className="cancel-btn" type="button" onClick={onClose}>Cancelar</button>
-            <button className="confirm-btn" type="button" onClick={() => console.log(requestBody)}>Criar robô</button>
+            <button className="confirm-btn" type="button" onClick={() => sendRobotInfo(requestBody)}>Criar robô</button>
           </div>
         </form>
       </div>
