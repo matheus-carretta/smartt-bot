@@ -8,9 +8,7 @@ import DailyInfosSections from './DailyInfosSection';
 
 function RobotCard(props) {
   const { robot } = props;
-  const {
-    daily_balance, movimentations, last_paper,
-  } = robot;
+  const { daily_balance, movimentations, last_paper } = robot;
 
   return (
     <div className="robot-card-container">

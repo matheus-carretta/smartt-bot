@@ -11,7 +11,7 @@ function TopCardInfo(props) {
   return (
     <>
       <div className="robot-title-container">
-        <h2 className={title.length > 15 ? 'robot-title minor-title' : 'robot-title'}>{title}</h2>
+        <h2 data-testid={title} className={title.length > 15 ? 'robot-title minor-title' : 'robot-title'}>{title}</h2>
         <div className="running-container">
           <img
             className="circle-status"

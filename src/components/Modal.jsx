@@ -2,8 +2,7 @@ import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Modal.css';
 import ModalContext from '../context/ModalContext';
-
-// import { createRobot } from '../services/api';
+import { createRobot } from '../services/api';
 
 function Modal({ onClose }) {
   const { changeRobotQuantity } = useContext(ModalContext);
@@ -31,7 +30,7 @@ function Modal({ onClose }) {
 
   const sendRobotInfo = (e, body) => {
     e.preventDefault();
-    console.log(body);
+    createRobot(body);
     changeRobotQuantity();
     onClose();
   };
@@ -45,7 +44,7 @@ function Modal({ onClose }) {
     >
       <div className="container">
         <div className="top-form-modal">
-          <p className="add-title">Adicionar novo Robô</p>
+          <p className="add-title" data-testid="add-title">Adicionar novo Robô</p>
           <button type="button" className="close" onClick={onClose}>X</button>
         </div>
         <h1 className="form-title">Vamos criar seu robô</h1>
@@ -55,6 +54,7 @@ function Modal({ onClose }) {
             Nome do produto
             <br />
             <input
+              data-testid="name-input"
               value={name}
               onChange={({ target }) => setName(target.value)}
               className="form-input"
@@ -68,6 +68,7 @@ function Modal({ onClose }) {
             Capital inicial do robô
             <br />
             <input
+              data-testid="value-input"
               value={initialValue}
               onChange={({ target }) => setInitialValue(target.value)}
               className="form-input"
@@ -83,6 +84,7 @@ function Modal({ onClose }) {
           <div className="bottom-form-btns">
             <button className="cancel-btn" type="button" onClick={onClose}>Cancelar</button>
             <button
+              data-testid="confirm-btn"
               disabled={!(name !== '' && initialValue !== '')}
               className="confirm-btn"
               type="submit"

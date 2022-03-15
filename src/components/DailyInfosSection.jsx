@@ -12,9 +12,10 @@ function DailyInfosSections({ balance, movimentations }) {
           <h5 className="balance-title">Saldo diário</h5>
           <img src={DownArrow} alt="Down arrow icon" />
         </div>
-        <p className={balance >= 0
-          ? ' daily-balance positive-balance'
-          : ' daily-balance negative-balance'}
+        <p
+          className={balance >= 0
+            ? ' daily-balance positive-balance'
+            : ' daily-balance negative-balance'}
         >
           {balance}
         </p>

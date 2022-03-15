@@ -16,7 +16,7 @@ function RobotsProvider({ children }) {
 
   useEffect(() => {
     getRobots();
-  }, []);
+  }, [robots]);
 
   const value = useMemo(() => ({
     robots,

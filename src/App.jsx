@@ -3,10 +3,10 @@ import Header from './components/Header';
 import Transactions from './components/Transactions';
 import AddRobotSection from './components/AddRobotSection';
 import RobotContainer from './components/RobotContainer';
-import './styles/App.css';
 import MovimentsProvider from './context/MovimentsProvider';
 import RobotsProvider from './context/RobotsProvider';
 import ModalProvider from './context/ModalProvider';
+import './styles/App.css';
 
 function App() {
   return (
