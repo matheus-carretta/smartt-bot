@@ -16,4 +16,4 @@ Este projeto teve como objetivo desenvolver uma tela de vizualização de robôs
 3. Agora está tudo pronto! Para iniciar utilize `npm start` e a página deve abrir em seu navegador.
 
 ## Link externo
-O site também está disponível para ser acessado sem a necessidade de downloads. Basta acessar este [link](https://matheus-smarttbot.netlify.app/).
+O site também está disponível para ser acessado sem a necessidade de downloads. Basta acessar este [link](https://matheus-smarttbot-teste.netlify.app).
