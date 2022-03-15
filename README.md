@@ -5,6 +5,7 @@ Este projeto teve como objetivo desenvolver uma tela de vizualização de robôs
 *  A linguagem de desenvolvimento utilizada foi o JavaScript
 * React para desenvolvimento do front
 * CSS para estilização, sem uso de pré-processadores ou libs externas
+* Context e Hooks para lidar com o estado da aplicação(os dados são simulados, nenhum dado persiste).
 * Biblioteca React Icons para utilização de alguns icones
 * Uso do lint para padronização de código
 * Requisições a API pública da Smartt Bot feitas com o módulo nativo fetch
