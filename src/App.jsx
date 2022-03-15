@@ -5,17 +5,23 @@ import AddRobotSection from './components/AddRobotSection';
 import RobotContainer from './components/RobotContainer';
 import './styles/App.css';
 import MovimentsProvider from './context/MovimentsProvider';
+import RobotsProvider from './context/RobotsProvider';
+import ModalProvider from './context/ModalProvider';
 
 function App() {
   return (
     <div className="content-container">
       <main>
-        <MovimentsProvider>
+        <RobotsProvider>
           <Header />
-          <Transactions />
-          <AddRobotSection />
+          <MovimentsProvider>
+            <Transactions />
+          </MovimentsProvider>
+          <ModalProvider>
+            <AddRobotSection />
+          </ModalProvider>
           <RobotContainer />
-        </MovimentsProvider>
+        </RobotsProvider>
       </main>
     </div>
   );

@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import RobotCard from './RobotCard';
 import '../styles/RobotContainer.css';
-import { fetchRobots } from '../services/api';
+import RobotsContext from '../context/RobotsContext';
 
 function RobotContainer() {
-  const [robots, setRobots] = useState([]);
-
-  const getRobots = async () => {
-    const { data } = await fetchRobots();
-    setRobots(data);
-  };
-
-  useEffect(() => {
-    getRobots();
-  }, []);
-
+  const { robots } = useContext(RobotsContext);
   return (
     <section className="robot-cards-container">
       {robots.length > 0

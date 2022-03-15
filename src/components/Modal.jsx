@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Modal.css';
+import ModalContext from '../context/ModalContext';
+
 // import { createRobot } from '../services/api';
 
-function Modal({ onClose = () => {} }, setRobotQuantity) {
+function Modal({ onClose }) {
+  const { changeRobotQuantity } = useContext(ModalContext);
   const [name, setName] = useState('');
-  const [initialValue, setInitialValue] = useState(0);
+  const [initialValue, setInitialValue] = useState('');
   const [strategy, setStrategy] = useState(2); // 2 = Tangram, 1 = Price Action
 
   const handleOutsideClick = ({ target }) => {
@@ -26,9 +29,11 @@ function Modal({ onClose = () => {} }, setRobotQuantity) {
     broker_id: 1,
   };
 
-  const sendRobotInfo = (body) => {
+  const sendRobotInfo = (e, body) => {
+    e.preventDefault();
     console.log(body);
-    setRobotQuantity((prevState) => prevState - 1);
+    changeRobotQuantity();
+    onClose();
   };
 
   return (
@@ -77,7 +82,14 @@ function Modal({ onClose = () => {} }, setRobotQuantity) {
           <button className={strategy === 2 ? 'not-selected' : 'selected'} type="button" onClick={() => setStrategy(1)}>Price Action</button>
           <div className="bottom-form-btns">
             <button className="cancel-btn" type="button" onClick={onClose}>Cancelar</button>
-            <button className="confirm-btn" type="button" onClick={() => sendRobotInfo(requestBody)}>Criar robô</button>
+            <button
+              disabled={!(name !== '' && initialValue !== '')}
+              className="confirm-btn"
+              type="submit"
+              onClick={(e) => sendRobotInfo(e, requestBody)}
+            >
+              Criar robô
+            </button>
           </div>
         </form>
       </div>

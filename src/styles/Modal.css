@@ -137,6 +137,13 @@
     font-size: 1em;
     padding: 0.5em 1.3em 0.5em 1em;
   }
+
+  .confirm-btn[disabled] {
+    color: #6A6C72;
+    background-color: #FFFFFF;
+    border: 1px solid #E3E2E3;
+  }
+
   button {
     cursor: pointer;
   }
