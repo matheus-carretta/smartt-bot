@@ -15,7 +15,7 @@ export const createRobot = (body) => {
     method: 'POST',
     body: JSON.stringify(body),
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-type': 'application/json',
     },
   })

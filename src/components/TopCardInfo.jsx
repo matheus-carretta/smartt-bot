@@ -6,7 +6,7 @@ import RedCircle from '../images/RedCircle.svg';
 function TopCardInfo(props) {
   const { robot } = props;
   const {
-    title, running, simulation, stock_codes, type, id,
+    title, running, simulation, stock_codes: stockCodes, type, id,
   } = robot;
   return (
     <>
@@ -27,7 +27,7 @@ function TopCardInfo(props) {
       </p>
       <div className="robot-process-infos">
         <p className="robot-info">{simulation === 0 ? 'Pessimista' : 'Otimista'}</p>
-        <p className="robot-info">{stock_codes}</p>
+        <p className="robot-info">{stockCodes}</p>
         <p className="robot-info">{type}</p>
       </div>
     </>

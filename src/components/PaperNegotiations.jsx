@@ -8,8 +8,8 @@ function PaperNegotiations() {
     <div>
       <h4 className="transictions-title">Papéis negociados</h4>
       <div className="paper-negotiations-container">
-        {Object.keys(moviment).length === 0 ? '' : papers.map(({ name, trasactions }, index) => (
-          <div key={index} className="paper-numbers-container">
+        {Object.keys(moviment).length === 0 ? '' : papers.map(({ name, trasactions }) => (
+          <div key={() => Math.random} className="paper-numbers-container">
             <span className="resume-paper-name">{name}</span>
             <hr className="hyphen-span" />
             <span className="transaction-number">
