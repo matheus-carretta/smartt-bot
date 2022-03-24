@@ -1,13 +1,23 @@
 export const fetchRobots = async () => {
-  const response = await fetch('https://api-front-test.k8s.smarttbot.com/api/v1/robot');
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch('https://api-front-test.k8s.smarttbot.com/api/v1/robot');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    alert(`Falha ao obter os dados: ${error}`);
+    return '';
+  }
 };
 
 export const fetchRobotsOverview = async () => {
-  const response = await fetch('https://api-front-test.k8s.smarttbot.com/api/v1/robot/overview');
-  const { data } = await response.json();
-  return data;
+  try {
+    const response = await fetch('https://api-front-test.k8s.smarttbot.com/api/v1/robot/overview');
+    const { data } = await response.json();
+    return data;
+  } catch (error) {
+    alert(`Falha ao obter os dados: ${error}`);
+    return '';
+  }
 };
 
 export const createRobot = (body) => {
@@ -20,5 +30,6 @@ export const createRobot = (body) => {
     },
   })
     .then((response) => response.json())
-    .then((json) => console.log(json));
+    .then((json) => console.log(json))
+    .catch(() => alert('Falha ao cadastras, tente novamente mais tarde.'));
 };
